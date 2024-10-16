@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  line-height: 58px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navdiv {
+  height: 100%;
+  display: flex;
+  width: 87%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navdiv button{
+  font-size: 14px;
+  line-height: 35px;
+  width: 100px;
+  border-color: transparent;
+  border-radius: 20px;
+  background-color: #8fe892;
+  cursor: pointer; 
+  transition: all 0.3s ease ease-in-out; 
+}
+
+.navdiv button:hover{
+  transform: translateY(1px) scale(1);  
+}
+.navdiv a {
+  color: rgb(11, 7, 7);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.content {
+  margin-top: 50 px;
+}
+
+.maindiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkdiv1 {
+  display: flex; /* Flexbox kullan */
+  /* Linkleri dikeyde alt alta sırala */
+  justify-content: center; /* Yatayda ortala */
+  align-items: center; /* Dikeyde ortala */
+  gap: 15px; /* Linkler arasında boşluk */
+  margin-top: 20px; /* Üstten boşluk ekle */
+}
+
+.linkdiv1 a {
+  text-decoration: none; /* Varsayılan alt çizgiyi kaldır */
+  color: black; /* Yazı rengi */
+  font-family: "Outfit", sans-serif;
+  font-weight: 550;
+  position: relative; /* Pseudo-element için gerekli */
+  display: inline-block; /* Her linkin kendi alt çizgisi olmasını sağla */
+}
+
+.linkdiv1 a::after {
+  content: ""; /* Alt çizgi için boş içerik */
+  position: absolute; /* Alt çizgiyi pozisyonla */
+  left: 0;
+  bottom: -2px; /* Yazının hemen altına yerleştir */
+  width: 0%; /* Başlangıçta genişliği 0 */
+  height: 2px; /* Çizginin kalınlığı */
+  background-color: black; /* Çizginin rengi */
+  transition: width 0.3s ease; /* Genişleme animasyonu */
+}
+
+.linkdiv1 a:hover::after {
+  width: 100%; /* Hover'da çizgiyi genişlet */
+}
+
+.inputdiv {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  height: 50px;
+  padding: 5px 5px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  background-color: white;
+}
+.inputdiv img {
+  height: 70%; /* İkonun boyutu */
+}
+
+.inputdiv input {
+  border: none; /* Sınırları kaldır */
+  flex: 1; /* Genişliği kalan alanı kaplasın */
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  outline: none; /* Tıklanınca oluşan çerçeveyi kaldır */
+}
+
+.inputdiv button {
+  border: none;
+  background-color: #8fe892;
+  color: black;
+  height: 90%;
+  width: 90px;
+
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inputdiv button:hover {
+  background-color: #45a049; /* Hover efekti */
+}
+
+#sc2 {
+  position: relative;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  width: 1100px;
+  overflow: hidden;
+  background-image: url("https://static.tacdn.com/img2/trips/home-gai-entry-gateway-dv.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.dvtr {
+  display: block;
+  width: 80%;
+  text-align: left;
+  margin-left: 7%;
+  margin-bottom: 0;
+  gap: 0;
+}
+.sc3div img {
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 270px;
+  height: auto;
+  display: block;
+}
+.sc3div {
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.sc3div p {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 30px;
+  font: bold;
+  text-align: left;
+  width: auto;
+}
+.sc3div div {
+  position: relative; /* bu divin icerisinde saxlayuruq diye sekil ve yazini ona da demek lazimdir ki relative positionda ol */
+}
+#sc3 {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#sc4 {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sc4div {
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+
+  position: relative;
+}
+
+.sc4div img {
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 360px;
+  height: 35vh;
+  display: block;
+}
+
+.sc4div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sc4div a {
+  color: black;
+  font-family: Fira Sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.sc4div a:hover {
+  text-decoration: underline;
+}
+
+#sc5 {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  width: 80%;
+}
+
+.sc5div {
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+
+  position: relative;
+}
+
+.sc5div img {
+  border: 2px solid white;
+  border-radius: 10px;
+ 
+  display: block;
+}
+
+.sc5headings {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+.btncircle{
+  height: 15px; background-color: rgb(101, 186, 101); border-color: transparent;border-radius: 29px;
+}
+
+.heartdiv {
+  position: relative;  
+  display: inline-block;  
+}
+
+.main-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px; 
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;  
+  right: 10px;  
+  height: 30px;
+  width: 33px;
+  background-color: aliceblue;
+  padding: 5px;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
+}
+
+footer {
+  width: 85%; 
+  display: flex;
+  flex-direction: column; 
+  margin-top: 180px;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+}
+
+footer h2 {
+  width: 100%; 
+  padding-left: 25px;
+   
+}
+
+.footer-container {
+  display: flex;
+  gap: 50px;  
+  width: 100%;    
+  padding-left: 25px;  
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: flex;
+  gap: 15px;  
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+footer h4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+footer h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;  
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
